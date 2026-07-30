@@ -128,69 +128,69 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
           </div>
         </div>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Product Cards Grid — 2 columns on mobile, 4 columns on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {filtered.map((prod) => (
             <div
               key={prod.id}
-              className="bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* Product Image Container */}
-                <div className="h-56 bg-gray-100 p-4 flex flex-col justify-between relative overflow-hidden">
+                <div className="h-36 sm:h-56 bg-gray-100 p-2 sm:p-4 flex flex-col justify-between relative overflow-hidden">
                   <Image
                     src={prod.imageSrc}
                     alt={prod.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none"></div>
 
-                  <div className="flex justify-between items-center relative z-10">
-                    <span className="text-[10px] font-bold uppercase tracking-wider bg-black/70 text-white px-2.5 py-1 rounded-full backdrop-blur-md">
+                  <div className="flex justify-between items-center relative z-10 gap-1">
+                    <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-white px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full backdrop-blur-md truncate">
                       {prod.tag}
                     </span>
-                    <span className="text-[10px] font-semibold text-white/90 bg-white/20 backdrop-blur-md px-2 py-0.5 rounded">
+                    <span className="text-[8px] sm:text-[10px] font-semibold text-white/90 bg-white/20 backdrop-blur-md px-1.5 py-0.5 rounded">
                       {prod.id}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-1.5 relative z-10">
+                  <div className="flex items-center gap-1 sm:gap-1.5 relative z-10">
                     {prod.colors.map((c, i) => (
-                      <span key={i} className="w-3.5 h-3.5 rounded-full border border-white/60 shadow-sm" style={{ backgroundColor: c }}></span>
+                      <span key={i} className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full border border-white/60 shadow-sm" style={{ backgroundColor: c }}></span>
                     ))}
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-5 space-y-2">
-                  <h3 className="text-lg font-bold text-[#0B0F19] group-hover:text-[#1D63FF] transition-colors">
+                <div className="p-3 sm:p-5 space-y-1 sm:space-y-2">
+                  <h3 className="text-sm sm:text-lg font-bold text-[#0B0F19] group-hover:text-[#1D63FF] transition-colors line-clamp-1">
                     {prod.name}
                   </h3>
-                  <p className="text-xs text-[#525866] font-medium">
+                  <p className="text-[11px] sm:text-xs text-[#525866] font-medium line-clamp-1">
                     {prod.material}
                   </p>
                 </div>
               </div>
 
               {/* Bottom Card Footer */}
-              <div className="p-5 pt-0 space-y-3">
-                <div className="flex items-center justify-between text-xs text-[#525866] pt-3 border-t border-[#E2E8F0]">
+              <div className="p-3 sm:p-5 pt-0 space-y-2 sm:space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] sm:text-xs text-[#525866] pt-2 sm:pt-3 border-t border-[#E2E8F0] gap-1">
                   <span className="flex items-center gap-1">
-                    <Info className="w-3.5 h-3.5 text-[#1D63FF]" />
+                    <Info className="w-3 h-3 text-[#1D63FF]" />
                     MOQ: <strong className="text-[#0B0F19]">{prod.moq}</strong>
                   </span>
                   <span className="text-[#10B981] font-semibold flex items-center gap-1">
-                    <Check className="w-3.5 h-3.5" /> In Stock
+                    <Check className="w-3 h-3" /> In Stock
                   </span>
                 </div>
 
                 <button
                   onClick={() => onOpenModal(prod.name)}
-                  className="w-full py-2.5 rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-xs transition-colors text-center"
+                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-[11px] sm:text-xs transition-colors text-center"
                 >
-                  Inquire Wholesale Quote
+                  Inquire Quote
                 </button>
               </div>
             </div>
