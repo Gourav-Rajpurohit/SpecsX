@@ -4,24 +4,37 @@ import Image from "next/image";
 import { ShieldCheck, Award, Zap, Globe, PackageCheck, Sparkles, Building2 } from "lucide-react";
 
 export default function HeroSection() {
+  const heroImages = [
+    { src: "/hero1.png", alt: "SpecsX Premium Case 1" },
+    { src: "/hero2.png", alt: "SpecsX Premium Case 2" },
+    { src: "/hero3.png", alt: "SpecsX Premium Case 3" },
+    { src: "/hero4.png", alt: "SpecsX Premium Case 4" },
+  ];
+
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-white via-[#EFF4FF]/40 to-white">
+    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
+      
+      {/* Background Decorative Blur Orbs */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#1D63FF]/15 to-blue-300/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Content Column */}
-          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EFF4FF] border border-[#1D63FF]/20 text-[#1D63FF] text-xs sm:text-sm font-semibold tracking-wide">
-              <span className="w-2 h-2 rounded-full bg-[#1D63FF] animate-pulse"></span>
-              B2B EYEWEAR CASE MANUFACTURING
-            </div>
+          {/* Left Column: Headlines & Stats */}
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF4FF] border border-[#1D63FF]/20 text-[#1D63FF] text-xs font-extrabold uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-[#1D63FF] animate-ping"></span>
+              B2B Wholesale & Custom Manufacturing
+            </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.15]">
-              Premium Eyewear Cases for Modern{" "}
-              <span className="text-[#1D63FF]">Optical Businesses</span>
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.1]">
+              Custom Eyewear Cases <br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-[#1D63FF] to-blue-700 bg-clip-text text-transparent">
+                Engineered to Scale.
+              </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-[#525866] max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-[#525866] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
               High-volume custom case manufacturing for optical chains, distributors, and eyewear brands. Engineered for maximum durability, elegance, and complete brand protection.
             </p>
 
@@ -76,58 +89,29 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Product Graphic Showcase */}
+          {/* Right Hero Images Grid Showcase */}
           <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Ambient Background Glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#1D63FF]/20 to-blue-200/50 rounded-3xl blur-2xl -z-10"></div>
+            {/* Ambient Background Glow */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-3xl blur-2xl -z-10"></div>
 
-              {/* Graphic Container */}
-              <div className="bg-white/90 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-[#E2E8F0] shadow-2xl space-y-6">
-                <div className="h-64 sm:h-72 rounded-2xl bg-gradient-to-br from-gray-50 via-slate-100 to-gray-200 border border-[#E2E8F0] flex flex-col items-center justify-center relative overflow-hidden group">
-                  
-                  {/* Eyewear Cases Stack Showcase */}
-                  <div className="relative w-56 h-36 flex flex-col items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
-                    {/* Top Open Hard Case with Logo */}
-                    <div className="w-48 h-16 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-black shadow-xl border border-slate-700 flex items-center justify-center relative z-20">
-                      <div className="w-40 h-10 rounded-xl bg-blue-900/40 border border-blue-400/30 flex items-center justify-center">
-                        <Image
-                          src="/logo.png"
-                          alt="SpecsX Logo"
-                          width={100}
-                          height={28}
-                          className="h-6 w-auto object-contain brightness-0 invert opacity-95"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Middle Folding Case */}
-                    <div className="w-52 h-14 rounded-2xl bg-gradient-to-r from-[#1D63FF] to-blue-700 shadow-xl border border-blue-400 -mt-4 relative z-10 flex items-center justify-center">
-                      <div className="w-12 h-1 rounded-full bg-white/40"></div>
-                    </div>
-
-                    {/* Bottom Leather Case */}
-                    <div className="w-56 h-12 rounded-2xl bg-gradient-to-r from-amber-900 to-amber-950 shadow-md border border-amber-800 -mt-4 flex items-center justify-center">
-                      <span className="text-[9px] text-amber-200 font-semibold uppercase tracking-wider">GENUINE LEATHER</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-3 left-4 right-4 flex justify-between items-center text-xs font-semibold text-[#525866]">
-                    <span>Wholesale Bulk Packaging</span>
-                    <span className="text-[#1D63FF] font-bold">500,000+ Units/Mo</span>
-                  </div>
+            {/* 2x2 Image Grid */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-md mx-auto lg:max-w-none">
+              {heroImages.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="relative h-40 sm:h-52 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out bg-white group cursor-pointer"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 300px"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    priority={idx < 2}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
-
-                <div className="p-4 rounded-xl bg-[#EFF4FF] border border-[#1D63FF]/20 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs text-[#525866]">Minimum Order Quantity</p>
-                    <p className="text-sm font-bold text-[#0B0F19]">500 Pcs per model</p>
-                  </div>
-                  <span className="px-3 py-1.5 rounded-lg bg-[#1D63FF]/10 text-[#1D63FF] text-xs font-bold">
-                    Factory Direct
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
