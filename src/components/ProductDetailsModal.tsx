@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { X, Check, ShieldCheck, Zap, Sparkles, Send, Box, Factory } from "lucide-react";
+import { X, Check, ShieldCheck, Zap, Sparkles, Send, Box, Factory, Phone } from "lucide-react";
 
 export interface Product {
   id: string;
@@ -141,13 +141,13 @@ export default function ProductDetailsModal({
             <div className="pt-3 flex flex-col sm:flex-row items-center gap-3">
               <button
                 onClick={() => {
-                  onClose();
+                  window.location.href = "tel:7340553468";
                   onRequestQuote(product.name);
                 }}
                 className="w-full sm:w-auto flex-1 py-3 px-6 rounded-xl bg-[#1D63FF] hover:bg-[#0049E6] text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#1D63FF]/20"
               >
-                <span>Inquire Wholesale Quote</span>
-                <Send className="w-4 h-4" />
+                <Phone className="w-4 h-4" />
+                <span>Call to Inquire Quote</span>
               </button>
               <button
                 onClick={onClose}

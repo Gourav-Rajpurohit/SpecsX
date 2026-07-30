@@ -48,7 +48,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300 mb-4">Global Sales</h4>
             <p className="text-xs text-gray-400">Inquiries: sales@specsx.com</p>
-            <p className="text-xs text-gray-400 mt-1">Phone: +1 (800) 555-0199</p>
+            <p className="text-xs text-gray-400 mt-1">Phone: +91 73405 53468</p>
             <p className="text-xs text-gray-400 mt-1">Mon – Fri: 8:00 AM – 6:00 PM EST</p>
           </div>
         </div>

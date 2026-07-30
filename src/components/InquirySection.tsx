@@ -58,7 +58,7 @@ export default function InquirySection() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#1D63FF]" />
-                <span className="font-semibold">+1 (800) 555-0199</span>
+                <span className="font-semibold">+91 73405 53468</span>
               </div>
               <div className="flex items-center gap-3 text-xs text-[#525866]">
                 <Clock className="w-4 h-4 text-[#1D63FF]" />

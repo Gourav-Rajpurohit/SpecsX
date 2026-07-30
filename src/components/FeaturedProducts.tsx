@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Check, Info } from "lucide-react";
+import { Check, Info, Phone } from "lucide-react";
 import ProductDetailsModal, { Product } from "./ProductDetailsModal";
+import CallInquiryModal from "./CallInquiryModal";
 
 interface FeaturedProductsProps {
   onOpenModal: (caseModel: string) => void;
@@ -11,6 +12,7 @@ interface FeaturedProductsProps {
 
 export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [callModalOpen, setCallModalOpen] = useState(false);
 
   const products: Product[] = [
     {
@@ -95,6 +97,14 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
     },
   ];
 
+  const handleInquireQuote = (e: React.MouseEvent, productName: string) => {
+    e.stopPropagation();
+    // Attempt to open device dialer with phone number 7340553468
+    window.location.href = "tel:7340553468";
+    // Show Call Inquiry popup modal (for copy button, desktop fallback & confirmation)
+    setCallModalOpen(true);
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,14 +178,13 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
                   </span>
                 </div>
 
+                {/* Call & Quote Button */}
                 <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onOpenModal(prod.name);
-                  }}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-[11px] sm:text-xs transition-colors text-center"
+                  onClick={(e) => handleInquireQuote(e, prod.name)}
+                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-[11px] sm:text-xs transition-colors flex items-center justify-center gap-1.5 text-center"
                 >
-                  Inquire Quote
+                  <Phone className="w-3.5 h-3.5" />
+                  <span>Inquire Quote</span>
                 </button>
               </div>
             </div>
@@ -188,6 +197,14 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
           isOpen={!!selectedProduct}
           onClose={() => setSelectedProduct(null)}
           onRequestQuote={(modelName) => onOpenModal(modelName)}
+        />
+
+        {/* Call Dialer & Copy Modal */}
+        <CallInquiryModal
+          isOpen={callModalOpen}
+          onClose={() => setCallModalOpen(false)}
+          phoneNumber="7340553468"
+          formattedNumber="+91 73405 53468"
         />
 
       </div>
