@@ -83,15 +83,15 @@ export default function HeroSection() {
           </div>
 
           {/* Right Hero 3-Image Overlapping 3D Tilted Cards Stack */}
-          <div className="lg:col-span-5 relative py-6 sm:py-10">
+          <div className="lg:col-span-5 relative pt-8 sm:pt-12 pb-6">
             {/* Ambient Background Glow */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-full blur-3xl -z-10"></div>
 
             {/* 3D Overlapping Floating Stack Container */}
-            <div className="relative w-full h-[360px] sm:h-[450px] flex items-center justify-center">
+            <div className="relative w-full h-[380px] sm:h-[470px] flex items-center justify-center">
               
               {/* Card 1: Top Right Tilted */}
-              <div className="absolute top-0 right-1 sm:right-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform rotate-[12deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
+              <div className="absolute top-6 sm:top-8 right-1 sm:right-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform rotate-[12deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
                   src="/hero1.avif"
                   alt="SpecsX Eyewear Case Showcase 1"
