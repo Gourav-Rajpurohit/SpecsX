@@ -77,8 +77,8 @@ export default function InquiryModal({ isOpen, onClose, selectedModel }: ModalPr
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#0B0F19] mb-1">Business Email *</label>
-                <input required type="email" placeholder="contact@visionoptics.com" className="w-full px-4 py-2.5 rounded-xl border border-[#E2E8F0] text-xs focus:ring-2 focus:ring-[#1D63FF] focus:outline-none" />
+                <label className="block text-xs font-semibold text-[#0B0F19] mb-1">Phone / WhatsApp Number *</label>
+                <input required type="tel" placeholder="+91 73405 53468" className="w-full px-4 py-2.5 rounded-xl border border-[#E2E8F0] text-xs focus:ring-2 focus:ring-[#1D63FF] focus:outline-none" />
               </div>
 
               <div>

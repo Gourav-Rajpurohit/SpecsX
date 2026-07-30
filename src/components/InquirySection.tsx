@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail, MapPin, Building, ShieldCheck, Clock } from "lucide-react";
+import { Phone, PhoneCall, MapPin, Building, ShieldCheck, Clock } from "lucide-react";
 
 export default function InquirySection() {
   return (
@@ -43,7 +43,7 @@ export default function InquirySection() {
           <div className="p-8 rounded-3xl bg-[#F8FAFC] border border-[#E2E8F0] shadow-sm space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-[#EFF4FF] border border-[#1D63FF]/20 flex items-center justify-center text-[#1D63FF]">
-                <Mail className="w-6 h-6" />
+                <PhoneCall className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-[#0B0F19]">B2B Direct Sales Office</h3>
@@ -52,10 +52,6 @@ export default function InquirySection() {
             </div>
 
             <div className="space-y-4 pt-4 border-t border-[#E2E8F0] text-sm text-[#0B0F19]">
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#1D63FF]" />
-                <span className="font-semibold">sales@specsx.com</span>
-              </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#1D63FF]" />
                 <span className="font-semibold">+91 73405 53468</span>
