@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#0B0F19] selection:bg-[#1D63FF] selection:text-white">
       <Navbar onOpenModal={handleOpenModal} />
-      <HeroSection onOpenModal={handleOpenModal} />
+      <HeroSection />
       <ProcessEngineering />
       {/* Disabled Explore Catalog Range section */}
       {/* <CatalogCategories onSelectCategory={(cat) => handleOpenModal(cat)} /> */}
