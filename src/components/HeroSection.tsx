@@ -5,7 +5,7 @@ import { ShieldCheck, Award, Zap, Globe, PackageCheck, Sparkles, Building2 } fro
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
+    <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
       
       {/* Background Decorative Blur Orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#1D63FF]/15 to-blue-300/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Hero 3-Image Overlapping 3D Tilted Cards Stack */}
-          <div className="lg:col-span-5 relative pt-8 sm:pt-12 pb-6">
+          <div className="lg:col-span-5 relative pt-2 sm:pt-4 pb-4">
             {/* Ambient Background Glow */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-full blur-3xl -z-10"></div>
 
