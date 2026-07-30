@@ -27,7 +27,8 @@ export default function Home() {
       <Navbar onOpenModal={handleOpenModal} />
       <HeroSection onOpenModal={handleOpenModal} />
       <ProcessEngineering />
-      <CatalogCategories onSelectCategory={(cat) => handleOpenModal(cat)} />
+      {/* Disabled Explore Catalog Range section */}
+      {/* <CatalogCategories onSelectCategory={(cat) => handleOpenModal(cat)} /> */}
       <FeaturedProducts onOpenModal={handleOpenModal} />
       <ColorPossibilities />
       <RetailersChoice />
