@@ -1,14 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Check, Info } from "lucide-react";
+import ProductDetailsModal, { Product } from "./ProductDetailsModal";
 
 interface FeaturedProductsProps {
   onOpenModal: (caseModel: string) => void;
 }
 
 export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps) {
-  const products = [
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const products: Product[] = [
     {
       id: "SX-101",
       name: "Model SX-101 Pro Hard",
@@ -101,7 +105,7 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
             Featured Wholesale Products
           </h2>
           <p className="text-base text-[#525866] mt-2">
-            High-durability polypropylene case designs ready for custom logo embossing.
+            Click any product card below to view detailed specifications and custom branding options.
           </p>
         </div>
 
@@ -110,7 +114,8 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
           {products.map((prod) => (
             <div
               key={prod.id}
-              className="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              onClick={() => setSelectedProduct(prod)}
+              className="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Product Image Container */}
@@ -164,7 +169,10 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
                 </div>
 
                 <button
-                  onClick={() => onOpenModal(prod.name)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onOpenModal(prod.name);
+                  }}
                   className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-[11px] sm:text-xs transition-colors text-center"
                 >
                   Inquire Quote
@@ -173,6 +181,14 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
             </div>
           ))}
         </div>
+
+        {/* Product Details Modal */}
+        <ProductDetailsModal
+          product={selectedProduct}
+          isOpen={!!selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          onRequestQuote={(modelName) => onOpenModal(modelName)}
+        />
 
       </div>
     </section>
