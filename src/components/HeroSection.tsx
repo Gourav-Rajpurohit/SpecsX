@@ -4,13 +4,6 @@ import Image from "next/image";
 import { ShieldCheck, Award, Zap, Globe, PackageCheck, Sparkles, Building2 } from "lucide-react";
 
 export default function HeroSection() {
-  const heroImages = [
-    { src: "/hero1.png", alt: "SpecsX Premium Case 1" },
-    { src: "/hero2.png", alt: "SpecsX Premium Case 2" },
-    { src: "/hero3.png", alt: "SpecsX Premium Case 3" },
-    { src: "/hero4.png", alt: "SpecsX Premium Case 4" },
-  ];
-
   return (
     <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
       
@@ -89,29 +82,63 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Hero Images Grid Showcase */}
-          <div className="lg:col-span-5 relative">
+          {/* Right Hero Overlapping 3D Tilted Cards Stack */}
+          <div className="lg:col-span-5 relative py-6 sm:py-10">
             {/* Ambient Background Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-3xl blur-2xl -z-10"></div>
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-full blur-3xl -z-10"></div>
 
-            {/* 2x2 Image Grid */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-md mx-auto lg:max-w-none">
-              {heroImages.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="relative h-40 sm:h-52 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500 ease-out bg-white group cursor-pointer"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 300px"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    priority={idx < 2}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                </div>
-              ))}
+            {/* 3D Overlapping Floating Stack Container */}
+            <div className="relative w-full h-[360px] sm:h-[450px] flex items-center justify-center">
+              
+              {/* Card 1: Top Right Tilted */}
+              <div className="absolute top-0 right-1 sm:right-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform rotate-[12deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
+                <Image
+                  src="/hero1.png"
+                  alt="SpecsX Case Model 1"
+                  fill
+                  sizes="(max-width: 768px) 60vw, 320px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+
+              {/* Card 2: Center Front Layered */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[310px] h-36 sm:h-48 rounded-3xl overflow-hidden border-2 border-white shadow-2xl shadow-blue-900/20 transform -rotate-[4deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-30 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
+                <Image
+                  src="/hero2.png"
+                  alt="SpecsX Case Model 2"
+                  fill
+                  sizes="(max-width: 768px) 70vw, 350px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+
+              {/* Card 3: Bottom Left Tilted */}
+              <div className="absolute bottom-2 left-1 sm:left-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform -rotate-[10deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-20 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
+                <Image
+                  src="/hero3.png"
+                  alt="SpecsX Case Model 3"
+                  fill
+                  sizes="(max-width: 768px) 60vw, 320px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+
+              {/* Card 4: Background Floating Accenter */}
+              <div className="absolute top-4 left-4 w-44 sm:w-56 h-28 sm:h-36 rounded-3xl overflow-hidden border border-[#E2E8F0] opacity-35 blur-[1px] transform -rotate-[16deg] hover:opacity-100 hover:blur-0 hover:rotate-0 hover:scale-105 hover:z-40 transition-all duration-500 ease-out bg-white cursor-pointer hidden sm:block">
+                <Image
+                  src="/hero4.png"
+                  alt="SpecsX Case Model 4"
+                  fill
+                  sizes="250px"
+                  className="object-cover"
+                />
+              </div>
+
             </div>
           </div>
 
