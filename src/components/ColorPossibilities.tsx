@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Check, Sparkles } from "lucide-react";
 
 export default function ColorPossibilities() {
@@ -79,9 +80,15 @@ export default function ColorPossibilities() {
             <div className="relative p-8 rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 backdrop-blur-2xl shadow-2xl flex flex-col items-center justify-center">
               
               <div className="w-full h-80 rounded-2xl flex items-center justify-center relative overflow-hidden transition-all duration-500 shadow-2xl" style={{ backgroundColor: selectedColor.hex }}>
-                <div className="w-64 h-32 rounded-3xl border-2 border-white/30 bg-black/20 backdrop-blur-md flex flex-col items-center justify-center text-white shadow-2xl space-y-2 transform hover:scale-105 transition-transform">
-                  <span className="text-sm font-extrabold tracking-widest">YOUR LOGO HERE</span>
-                  <span className="text-[10px] text-white/70 uppercase">Debossed / Gold Foil Stamped</span>
+                <div className="w-64 h-32 rounded-3xl border-2 border-white/30 bg-black/30 backdrop-blur-md flex flex-col items-center justify-center text-white shadow-2xl space-y-2 transform hover:scale-105 transition-transform p-4">
+                  <Image
+                    src="/logo.png"
+                    alt="SpecsX Logo Custom Emboss"
+                    width={140}
+                    height={40}
+                    className="h-10 w-auto object-contain brightness-0 invert drop-shadow-md"
+                  />
+                  <span className="text-[10px] text-white/80 uppercase font-medium tracking-wider">Debossed / Gold Foil Stamped</span>
                 </div>
               </div>
 

@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "SpecsX — Premium Eyewear Case Manufacturer & Wholesale Supplier",
   description: "High-volume custom eyewear case manufacturing for optical chains, distributors, and brands. Engineered for durability, elegance, and brand protection.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

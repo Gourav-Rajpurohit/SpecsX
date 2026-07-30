@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Check, Info } from "lucide-react";
 
 interface FeaturedProductsProps {
@@ -147,9 +148,15 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
                   </div>
 
                   {/* Stylized Eyewear Case Shape */}
-                  <div className="w-40 h-20 mx-auto rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-xs font-bold text-white tracking-widest">SPECSX</span>
-                    <span className="text-[9px] text-white/70">OEM CASE</span>
+                  <div className="w-40 h-20 mx-auto rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 p-2">
+                    <Image
+                      src="/logo.png"
+                      alt="SpecsX Logo"
+                      width={90}
+                      height={25}
+                      className="h-6 w-auto object-contain brightness-0 invert opacity-95"
+                    />
+                    <span className="text-[8px] text-white/80 font-medium tracking-wider uppercase mt-1">OEM CASE</span>
                   </div>
 
                   <div className="flex items-center gap-1.5">

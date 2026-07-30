@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#0B0F19] text-white pt-16 pb-12 border-t border-white/10">
@@ -8,14 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#1D63FF] flex items-center justify-center font-bold text-white text-base">
-                S
-              </div>
-              <span className="text-xl font-extrabold tracking-tight">
-                Specs<span className="text-[#1D63FF]">X</span>
-              </span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="SpecsX Logo"
+              width={140}
+              height={40}
+              className="h-10 w-auto object-contain brightness-0 invert"
+            />
             <p className="text-xs text-gray-400 leading-relaxed">
               Premier B2B eyewear case manufacturer and wholesale distributor. Engineering durable protection and high-end branding for optical businesses worldwide.
             </p>

@@ -2,6 +2,7 @@
 
 import { X, Send, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 interface ModalProps {
   isOpen: boolean;
@@ -45,6 +46,13 @@ export default function InquiryModal({ isOpen, onClose, selectedModel }: ModalPr
         ) : (
           <div className="space-y-6">
             <div>
+              <Image
+                src="/logo.png"
+                alt="SpecsX Logo"
+                width={120}
+                height={35}
+                className="h-8 w-auto object-contain mb-3"
+              />
               <span className="text-[10px] font-bold text-[#1D63FF] uppercase tracking-wider bg-[#EFF4FF] px-3 py-1 rounded-full">
                 B2B DIRECT QUOTE
               </span>

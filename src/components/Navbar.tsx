@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X, ChevronRight } from "lucide-react";
 
 interface NavbarProps {
@@ -13,11 +14,16 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-[#1D63FF] flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-            S
-          </div>
+        {/* Brand Logo & Name */}
+        <a href="#" className="flex items-center gap-3 group">
+          <Image
+            src="/logo.png"
+            alt="SpecsX Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+            priority
+          />
           <span className="text-2xl font-extrabold tracking-tight text-[#0B0F19]">
             Specs<span className="text-[#1D63FF]">X</span>
           </span>

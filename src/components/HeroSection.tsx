@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ShieldCheck, Award, Zap, Globe, ArrowRight, FileText } from "lucide-react";
 
 interface HeroProps {
@@ -82,7 +83,13 @@ export default function HeroSection({ onOpenModal }: HeroProps) {
                     {/* Top Open Hard Case */}
                     <div className="w-48 h-16 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-black shadow-xl border border-slate-700 flex items-center justify-center relative z-20">
                       <div className="w-40 h-10 rounded-xl bg-blue-900/40 border border-blue-400/30 flex items-center justify-center">
-                        <span className="text-[10px] uppercase font-bold text-blue-200 tracking-widest">SPECSX PREMIUM</span>
+                        <Image
+                          src="/logo.png"
+                          alt="SpecsX Logo"
+                          width={100}
+                          height={28}
+                          className="h-6 w-auto object-contain brightness-0 invert opacity-90"
+                        />
                       </div>
                     </div>
 
