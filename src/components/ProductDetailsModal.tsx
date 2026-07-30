@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { X, Check, ShieldCheck, Zap, Sparkles, Send, Box, Factory, Phone } from "lucide-react";
+import { X, Check, ShieldCheck, Sparkles, Box, Factory, Phone } from "lucide-react";
 
 export interface Product {
   id: string;

@@ -42,7 +42,7 @@ export default function RetailersChoice() {
         
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
-            The Retailer's Choice
+            The Retailer&apos;s Choice
           </h2>
           <p className="text-base text-[#525866]">
             Built specifically to empower optical chains, independent optometrists, and eyewear brands.

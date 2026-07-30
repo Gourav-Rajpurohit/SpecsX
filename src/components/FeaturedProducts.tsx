@@ -97,10 +97,12 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
     },
   ];
 
-  const handleInquireQuote = (e: React.MouseEvent, productName: string) => {
+  const handleInquireQuote = (e: React.MouseEvent) => {
     e.stopPropagation();
     // Attempt to open device dialer with phone number 7340553468
-    window.location.href = "tel:7340553468";
+    if (typeof window !== "undefined") {
+      window.open("tel:7340553468", "_self");
+    }
     // Show Call Inquiry popup modal (for copy button, desktop fallback & confirmation)
     setCallModalOpen(true);
   };
@@ -180,7 +182,7 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
 
                 {/* Call & Quote Button */}
                 <button
-                  onClick={(e) => handleInquireQuote(e, prod.name)}
+                  onClick={(e) => handleInquireQuote(e)}
                   className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#EFF4FF] hover:bg-[#1D63FF] text-[#1D63FF] hover:text-white font-semibold text-[11px] sm:text-xs transition-colors flex items-center justify-center gap-1.5 text-center"
                 >
                   <Phone className="w-3.5 h-3.5" />
