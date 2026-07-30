@@ -93,7 +93,7 @@ export default function HeroSection() {
               {/* Card 1: Top Right Tilted */}
               <div className="absolute top-0 right-1 sm:right-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform rotate-[12deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
-                  src="/hero1.png"
+                  src="/hero1.avif"
                   alt="SpecsX Eyewear Case Showcase 1"
                   fill
                   sizes="(max-width: 768px) 60vw, 320px"
@@ -106,7 +106,7 @@ export default function HeroSection() {
               {/* Card 2: Center Front Layered */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[310px] h-36 sm:h-48 rounded-3xl overflow-hidden border-2 border-white shadow-2xl shadow-blue-900/20 transform -rotate-[4deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-30 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
-                  src="/hero2.png"
+                  src="/hero2.avif"
                   alt="SpecsX Eyewear Case Showcase 2"
                   fill
                   sizes="(max-width: 768px) 70vw, 350px"
@@ -119,7 +119,7 @@ export default function HeroSection() {
               {/* Card 3: Bottom Left Tilted */}
               <div className="absolute bottom-2 left-1 sm:left-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform -rotate-[10deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-20 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
-                  src="/hero3.png"
+                  src="/hero3.jpeg"
                   alt="SpecsX Eyewear Case Showcase 3"
                   fill
                   sizes="(max-width: 768px) 60vw, 320px"
