@@ -17,80 +17,80 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
       name: "Model SX-101 Pro Hard",
       category: "Hard Shell",
       tag: "BESTSELLER",
-      material: "Textured PU Leather + Aluminum Shell",
+      material: "High-Grade Polypropylene",
       moq: "500 pcs",
       colors: ["#0B0F19", "#1D63FF", "#8B5CF6", "#10B981"],
-      imageBg: "bg-slate-900",
+      imageSrc: "/products img/img1051.jpg",
     },
     {
       id: "SX-204",
       name: "Model SX-204 Soft Pouch",
       category: "Soft Pouches",
       tag: "NEW",
-      material: "Ultra-Soft Microfiber Felt + Drawstring",
+      material: "Polypropylene & Microfiber",
       moq: "1,000 pcs",
       colors: ["#64748B", "#D97706", "#EC4899"],
-      imageBg: "bg-amber-800",
+      imageSrc: "/products img/img1065.jpg",
     },
     {
       id: "SX-305",
       name: "Model SX-305 Magnetic Triangle",
       category: "Magnetic",
       tag: "BESTSELLER",
-      material: "Collapsible Rigid Board + N52 Magnet",
+      material: "Rigid Polypropylene + N52 Magnet",
       moq: "500 pcs",
       colors: ["#0B0F19", "#1D63FF", "#047857"],
-      imageBg: "bg-[#1D63FF]",
+      imageSrc: "/products img/img1170.jpg",
     },
     {
       id: "SX-402",
       name: "Model SX-402 Luxury Box",
       category: "Structure Box",
       tag: "PREMIUM",
-      material: "Rigid Bookboard + Velvet Cushion",
+      material: "Molded Polypropylene + Velvet Inner",
       moq: "300 pcs",
       colors: ["#0F172A", "#B45309"],
-      imageBg: "bg-slate-800",
+      imageSrc: "/products img/img1226.jpg",
     },
     {
       id: "SX-508",
-      name: "Model SX-508 Eco Felt",
+      name: "Model SX-508 Eco Fold",
       category: "Soft Pouches",
       tag: "ECO-FRIENDLY",
-      material: "Recycled PET Felt + Wooden Button",
+      material: "Recycled Polypropylene (rPP)",
       moq: "1,000 pcs",
       colors: ["#475569", "#15803D"],
-      imageBg: "bg-emerald-900",
+      imageSrc: "/products img/img1258.jpg",
     },
     {
       id: "SX-612",
-      name: "Model SX-612 Slim Metallic",
+      name: "Model SX-612 Slim Matte",
       category: "Hard Shell",
       tag: "NEW",
-      material: "Anodized Matte Aluminum Alloy",
+      material: "Matte Finish Polypropylene",
       moq: "500 pcs",
       colors: ["#334155", "#94A3B8", "#B91C1C"],
-      imageBg: "bg-zinc-800",
+      imageSrc: "/products img/img1345.jpg",
     },
     {
       id: "SX-715",
       name: "Model SX-715 Executive Fold",
       category: "Magnetic",
       tag: "BESTSELLER",
-      material: "Cross-grain PU + Magnetic Closure",
+      material: "Textured Polypropylene + Magnetic Lock",
       moq: "500 pcs",
       colors: ["#0B0F19", "#78350F", "#1E3A8A"],
-      imageBg: "bg-amber-950",
+      imageSrc: "/products img/img1367.jpg",
     },
     {
       id: "SX-820",
       name: "Model SX-820 Custom Embossed",
       category: "Structure Box",
       tag: "CUSTOM OEM",
-      material: "Full Foil Stamped Pattern + Satin",
+      material: "Stamped Polypropylene Shell",
       moq: "500 pcs",
       colors: ["#0B0F19", "#B91C1C", "#1D63FF"],
-      imageBg: "bg-indigo-950",
+      imageSrc: "/products img/img1753.jpg",
     },
   ];
 
@@ -106,7 +106,7 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
               Featured Wholesale Products
             </h2>
             <p className="text-base text-[#525866] mt-2">
-              Our highest volume case designs ready for custom logo embossing.
+              High-durability polypropylene case designs ready for custom logo embossing.
             </p>
           </div>
 
@@ -136,42 +136,39 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
               className="bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                {/* Image Placeholder Render */}
-                <div className={`h-52 ${prod.imageBg} p-4 flex flex-col justify-between relative overflow-hidden`}>
-                  <div className="flex justify-between items-center">
+                {/* Product Image Container */}
+                <div className="h-56 bg-gray-100 p-4 flex flex-col justify-between relative overflow-hidden">
+                  <Image
+                    src={prod.imageSrc}
+                    alt={prod.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none"></div>
+
+                  <div className="flex justify-between items-center relative z-10">
                     <span className="text-[10px] font-bold uppercase tracking-wider bg-black/70 text-white px-2.5 py-1 rounded-full backdrop-blur-md">
                       {prod.tag}
                     </span>
-                    <span className="text-[10px] font-semibold text-white/80 bg-white/20 px-2 py-0.5 rounded">
+                    <span className="text-[10px] font-semibold text-white/90 bg-white/20 backdrop-blur-md px-2 py-0.5 rounded">
                       {prod.id}
                     </span>
                   </div>
 
-                  {/* Stylized Eyewear Case Shape */}
-                  <div className="w-40 h-20 mx-auto rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 p-2">
-                    <Image
-                      src="/logo.png"
-                      alt="SpecsX Logo"
-                      width={90}
-                      height={25}
-                      className="h-6 w-auto object-contain brightness-0 invert opacity-95"
-                    />
-                    <span className="text-[8px] text-white/80 font-medium tracking-wider uppercase mt-1">OEM CASE</span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 relative z-10">
                     {prod.colors.map((c, i) => (
-                      <span key={i} className="w-3.5 h-3.5 rounded-full border border-white/40 shadow-sm" style={{ backgroundColor: c }}></span>
+                      <span key={i} className="w-3.5 h-3.5 rounded-full border border-white/60 shadow-sm" style={{ backgroundColor: c }}></span>
                     ))}
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-5 space-y-3">
+                <div className="p-5 space-y-2">
                   <h3 className="text-lg font-bold text-[#0B0F19] group-hover:text-[#1D63FF] transition-colors">
                     {prod.name}
                   </h3>
-                  <p className="text-xs text-[#525866] line-clamp-2">
+                  <p className="text-xs text-[#525866] font-medium">
                     {prod.material}
                   </p>
                 </div>
