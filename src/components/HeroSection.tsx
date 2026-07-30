@@ -25,8 +25,8 @@ export default function HeroSection() {
               High-volume custom case manufacturing for optical chains, distributors, and eyewear brands. Engineered for maximum durability, elegance, and complete brand protection.
             </p>
 
-            {/* Key Value Stat Highlights (Replaces Buttons) */}
-            <div className="grid grid-cols-3 gap-4 pt-2 max-w-xl mx-auto lg:mx-0">
+            {/* Key Value Stat Highlights (Hidden on Mobile) */}
+            <div className="hidden sm:grid grid-cols-3 gap-4 pt-2 max-w-xl mx-auto lg:mx-0">
               <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-1.5 text-[#1D63FF] mb-1">
                   <PackageCheck className="w-4 h-4" />
