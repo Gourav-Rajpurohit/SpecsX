@@ -26,10 +26,10 @@ export default function Home() {
     <main className="min-h-screen bg-white text-[#0B0F19] selection:bg-[#1D63FF] selection:text-white">
       <Navbar onOpenModal={handleOpenModal} />
       <HeroSection />
-      <ProcessEngineering />
+      <FeaturedProducts onOpenModal={handleOpenModal} />
       {/* Disabled Explore Catalog Range section */}
       {/* <CatalogCategories onSelectCategory={(cat) => handleOpenModal(cat)} /> */}
-      <FeaturedProducts onOpenModal={handleOpenModal} />
+      <ProcessEngineering />
       {/* Disabled Color Possibilities section */}
       {/* <ColorPossibilities /> */}
       <RetailersChoice />

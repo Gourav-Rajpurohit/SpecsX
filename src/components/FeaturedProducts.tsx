@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Check, Info } from "lucide-react";
 
@@ -9,8 +8,6 @@ interface FeaturedProductsProps {
 }
 
 export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps) {
-  const [filter, setFilter] = useState("All");
-
   const products = [
     {
       id: "SX-101",
@@ -94,43 +91,23 @@ export default function FeaturedProducts({ onOpenModal }: FeaturedProductsProps)
     },
   ];
 
-  const filtered = filter === "All" ? products : products.filter(p => p.category === filter);
-
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
-              Featured Wholesale Products
-            </h2>
-            <p className="text-base text-[#525866] mt-2">
-              High-durability polypropylene case designs ready for custom logo embossing.
-            </p>
-          </div>
-
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2 bg-[#F8FAFC] p-1.5 rounded-xl border border-[#E2E8F0]">
-            {["All", "Hard Shell", "Magnetic", "Soft Pouches", "Structure Box"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setFilter(tab)}
-                className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                  filter === tab
-                    ? "bg-[#1D63FF] text-white shadow-sm"
-                    : "text-[#525866] hover:text-[#0B0F19]"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+        {/* Section Title */}
+        <div className="mb-12">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
+            Featured Wholesale Products
+          </h2>
+          <p className="text-base text-[#525866] mt-2">
+            High-durability polypropylene case designs ready for custom logo embossing.
+          </p>
         </div>
 
         {/* Product Cards Grid — 2 columns on mobile, 4 columns on desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-          {filtered.map((prod) => (
+          {products.map((prod) => (
             <div
               key={prod.id}
               className="bg-white rounded-xl sm:rounded-2xl border border-[#E2E8F0] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
