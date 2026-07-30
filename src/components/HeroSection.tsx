@@ -5,7 +5,7 @@ import { ShieldCheck, Award, Zap, Globe, PackageCheck, Sparkles, Building2 } fro
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
+    <section className="relative pt-6 pb-12 sm:pt-10 sm:pb-16 bg-[#F8FAFC] border-b border-[#E2E8F0] overflow-hidden">
       
       {/* Background Decorative Blur Orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#1D63FF]/15 to-blue-300/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
