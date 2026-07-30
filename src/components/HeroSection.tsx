@@ -82,7 +82,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Hero Overlapping 3D Tilted Cards Stack */}
+          {/* Right Hero 3-Image Overlapping 3D Tilted Cards Stack */}
           <div className="lg:col-span-5 relative py-6 sm:py-10">
             {/* Ambient Background Glow */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D63FF]/20 via-blue-300/30 to-purple-200/20 rounded-full blur-3xl -z-10"></div>
@@ -94,7 +94,7 @@ export default function HeroSection() {
               <div className="absolute top-0 right-1 sm:right-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform rotate-[12deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
                   src="/hero1.png"
-                  alt="SpecsX Case Model 1"
+                  alt="SpecsX Eyewear Case Showcase 1"
                   fill
                   sizes="(max-width: 768px) 60vw, 320px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -107,7 +107,7 @@ export default function HeroSection() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[310px] h-36 sm:h-48 rounded-3xl overflow-hidden border-2 border-white shadow-2xl shadow-blue-900/20 transform -rotate-[4deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-30 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
                   src="/hero2.png"
-                  alt="SpecsX Case Model 2"
+                  alt="SpecsX Eyewear Case Showcase 2"
                   fill
                   sizes="(max-width: 768px) 70vw, 350px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -120,23 +120,12 @@ export default function HeroSection() {
               <div className="absolute bottom-2 left-1 sm:left-4 w-52 sm:w-72 h-34 sm:h-44 rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl shadow-black/10 transform -rotate-[10deg] hover:rotate-0 hover:scale-105 hover:-translate-y-3 z-20 hover:z-40 transition-all duration-500 ease-out bg-white group cursor-pointer">
                 <Image
                   src="/hero3.png"
-                  alt="SpecsX Case Model 3"
+                  alt="SpecsX Eyewear Case Showcase 3"
                   fill
                   sizes="(max-width: 768px) 60vw, 320px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </div>
-
-              {/* Card 4: Background Floating Accenter */}
-              <div className="absolute top-4 left-4 w-44 sm:w-56 h-28 sm:h-36 rounded-3xl overflow-hidden border border-[#E2E8F0] opacity-35 blur-[1px] transform -rotate-[16deg] hover:opacity-100 hover:blur-0 hover:rotate-0 hover:scale-105 hover:z-40 transition-all duration-500 ease-out bg-white cursor-pointer hidden sm:block">
-                <Image
-                  src="/hero4.png"
-                  alt="SpecsX Case Model 4"
-                  fill
-                  sizes="250px"
-                  className="object-cover"
-                />
               </div>
 
             </div>
