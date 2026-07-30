@@ -30,9 +30,11 @@ export default function Home() {
       {/* Disabled Explore Catalog Range section */}
       {/* <CatalogCategories onSelectCategory={(cat) => handleOpenModal(cat)} /> */}
       <FeaturedProducts onOpenModal={handleOpenModal} />
-      <ColorPossibilities />
+      {/* Disabled Color Possibilities section */}
+      {/* <ColorPossibilities /> */}
       <RetailersChoice />
-      <InsideSpecsX />
+      {/* Disabled Inside SpecsX section */}
+      {/* <InsideSpecsX /> */}
       <InquirySection />
       <Footer />
       
